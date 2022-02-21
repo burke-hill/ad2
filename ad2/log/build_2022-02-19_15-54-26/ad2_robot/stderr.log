@@ -1,0 +1,6 @@
+CMake Error at cmake_install.cmake:41 (file):
+  file INSTALL cannot set permissions on
+  "/home/burkehill/ad2/install/ad2_robot/share/ad2_robot/models/test_description/urdf/test.urdf":
+  Operation not permitted.
+
+

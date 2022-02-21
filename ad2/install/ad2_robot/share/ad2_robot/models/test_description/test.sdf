@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<sdf version='1.7'>
+  <model name='test'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.003851 0.028077 -1e-05 0 -0 0</pose>
+        <mass>0.174078</mass>
+        <inertia>
+          <ixx>0.000416752</ixx>
+          <ixy>1.77575e-06</ixy>
+          <ixz>-6.98728e-09</ixz>
+          <iyy>0.000938337</iyy>
+          <iyz>-4.77852e-08</iyz>
+          <izz>0.000680761</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Back Left Wheel' type='revolute'>
+      <pose relative_to='base_link'>-0.14 0.077214 0.085 0 0 -1.61101</pose>
+      <parent>base_link</parent>
+      <child>BLW</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BLW'>
+      <pose relative_to='Back Left Wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.005 0 -0 0</pose>
+        <mass>0.0277717</mass>
+        <inertia>
+          <ixx>6.59115e-06</ixx>
+          <ixy>-2.64698e-23</ixy>
+          <ixz>1.06863e-21</ixz>
+          <iyy>6.59115e-06</iyy>
+          <iyz>1.55113e-22</iyz>
+          <izz>1.27194e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='BLW_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/BLW.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BLW_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/BLW.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Back Right Wheel' type='revolute'>
+      <pose relative_to='base_link'>-0.14 0.077214 -0.085 0 -0 0.453067</pose>
+      <parent>base_link</parent>
+      <child>BRW</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BRW'>
+      <pose relative_to='Back Right Wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 -0.005 0 -0 0</pose>
+        <mass>0.0277717</mass>
+        <inertia>
+          <ixx>6.59115e-06</ixx>
+          <ixy>2.11758e-22</ixy>
+          <ixz>1.56036e-22</ixz>
+          <iyy>6.59115e-06</iyy>
+          <iyz>-1.12343e-21</iyz>
+          <izz>1.27194e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='BRW_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/BRW.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='BRW_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/BRW.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Front Left Wheel' type='revolute'>
+      <pose relative_to='base_link'>0.14 0.077214 0.085 0 -0 0.453067</pose>
+      <parent>base_link</parent>
+      <child>FLW</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FLW'>
+      <pose relative_to='Front Left Wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 0.005 0 -0 0</pose>
+        <mass>0.0277717</mass>
+        <inertia>
+          <ixx>6.59115e-06</ixx>
+          <ixy>6.35275e-22</ixy>
+          <ixz>-2.93281e-22</ixz>
+          <iyy>6.59115e-06</iyy>
+          <iyz>-1.35272e-21</iyz>
+          <izz>1.27194e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='FLW_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/FLW.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FLW_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/FLW.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Front Right Wheel' type='revolute'>
+      <pose relative_to='base_link'>0.14 0.077214 -0.085 0 -0 0.453067</pose>
+      <parent>base_link</parent>
+      <child>FRW</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FRW'>
+      <pose relative_to='Front Right Wheel'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.005 0 -0 0</pose>
+        <mass>0.0277717</mass>
+        <inertia>
+          <ixx>6.59115e-06</ixx>
+          <ixy>2.11758e-22</ixy>
+          <ixz>1.56036e-22</ixz>
+          <iyy>6.59115e-06</iyy>
+          <iyz>-1.12343e-21</iyz>
+          <izz>1.27194e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='FRW_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/FRW.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='FRW_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://ad2_robot/models/test/meshes/FRW.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

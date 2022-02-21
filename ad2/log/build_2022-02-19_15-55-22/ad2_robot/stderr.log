@@ -1,0 +1,6 @@
+CMake Error at cmake_install.cmake:41 (file):
+  file INSTALL cannot set permissions on
+  "/home/burkehill/ad2/install/ad2_robot/share/ad2_robot/worlds/basic_world/smalltown)old.world":
+  Operation not permitted.
+
+
